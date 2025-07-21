@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>IngenAI - AI Chatbots for Real Estate</title>
+    <title>IngenAI - AI Chatbotovi za Nekretnine</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
         h1 { color: #002366; }
@@ -13,11 +13,39 @@
             text-decoration: none;
             font-weight: bold;
         }
+        #hr { display: none; } /* Hides Croatian by default */
     </style>
 </head>
 <body>
-    <h1>Automate Real Estate with AI</h1>
-    <p>Lead collection, bookings, and more.</p>
-    <a href="#contact" class="cta-button">Get Started</a>
+    <!-- English Content -->
+    <div id="en">
+        <h1>Automate Real Estate with AI</h1>
+        <p>Lead collection, bookings, and more.</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+
+    <!-- Croatian Content -->
+    <div id="hr">
+        <h1>Automatizirajte Nekretnine s AI-om</h1>
+        <p>Prikupljanje leadova, rezervacije i više.</p>
+        <a href="#contact" class="cta-button">Započnite</a>
+    </div>
+
+    <!-- Language Toggle Button -->
+    <button onclick="toggleLanguage()" style="margin-top: 20px;">HR / EN</button>
+
+    <script>
+        function toggleLanguage() {
+            const en = document.getElementById("en");
+            const hr = document.getElementById("hr");
+            if (en.style.display === "none") {
+                en.style.display = "block";
+                hr.style.display = "none";
+            } else {
+                en.style.display = "none";
+                hr.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
